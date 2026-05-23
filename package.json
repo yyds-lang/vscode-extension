@@ -1,10 +1,10 @@
 {
-  "name": "yyds-lang",
+  "name": "yyds-lang-toolkit",
   "publisher": "imba97",
-  "displayName": "YYDS Language",
+  "displayName": "YYDS Language Toolkit",
   "icon": "images/icon.png",
   "description": "YYDS language support with syntax highlighting for .yyds files.",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "license": "MIT",
   "type": "module",
   "main": "./dist/extension.mjs",
