@@ -1,9 +1,13 @@
 .vscode/**
 .vscode-test/**
+.github/**
 .gitignore
+tests/**
 scripts/**
-test/**
+src/**
 vite.config.ts
 tsconfig.json
 package-lock.json
+pnpm-lock.yaml
+pnpm-workspace.yaml
 vsc-extension-quickstart.md
