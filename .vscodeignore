@@ -1,0 +1,9 @@
+.vscode/**
+.vscode-test/**
+.gitignore
+scripts/**
+test/**
+vite.config.ts
+tsconfig.json
+package-lock.json
+vsc-extension-quickstart.md

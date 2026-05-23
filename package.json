@@ -1,0 +1,60 @@
+{
+  "name": "yyds-language",
+  "publisher": "imba97",
+  "displayName": "YYDS Language",
+  "description": "YYDS language support with syntax highlighting for .yyds files.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/extension.mjs",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "sync:grammar": "pnpm run build && node ./dist/sync-grammar.mjs",
+    "check:grammar": "pnpm run build && node ./dist/sync-grammar.mjs --check",
+    "test": "node --test",
+    "vscode:prepublish": "pnpm run sync:grammar",
+    "package": "pnpm run sync:grammar && vsce package --no-dependencies --allow-missing-repository"
+  },
+  "dependencies": {
+    "@yyds-lang/language-service": "0.0.6",
+    "vscode-languageclient": "^9.0.1",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.12"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/vscode": "1.82.0",
+    "@vscode/vsce": "^3.9.1",
+    "@yyds-lang/textmate": "0.0.6",
+    "typescript": "^6.0.3",
+    "vite-plus": "^0.1.22"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "yyds",
+        "aliases": [
+          "YYDS",
+          "yyds"
+        ],
+        "extensions": [
+          ".yyds"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "yyds",
+        "scopeName": "source.yyds",
+        "path": "./syntaxes/yyds.tmLanguage.json"
+      }
+    ]
+  }
+}

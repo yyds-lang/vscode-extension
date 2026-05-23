@@ -1,0 +1,90 @@
+{
+  "scopeName": "source.yyds",
+  "name": "YYDS",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#notes"
+    },
+    {
+      "include": "#duration"
+    },
+    {
+      "include": "#operators"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.yyds",
+          "match": "//.*$"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.yyds",
+          "match": "\\b(yyds|song|tempo|velocity|meter|key|unit|octave|strict|section|track|play|repeat|after|refer|instrument|volume|pan|mute|solo|transpose|allow_unbalanced)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.yyds",
+          "begin": "\"",
+          "end": "\""
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.yyds",
+          "match": "\\b\\d+(?:\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "notes": {
+      "patterns": [
+        {
+          "name": "entity.name.note.yyds",
+          "match": "\\b[A-G](?:#|b)?\\d\\b"
+        },
+        {
+          "name": "constant.language.rest.yyds",
+          "match": "\\b(?:R|__)\\b"
+        }
+      ]
+    },
+    "duration": {
+      "patterns": [
+        {
+          "name": "storage.type.duration.yyds",
+          "match": "\\/(w|h|q|e|s|\\d+)\\.?"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.yyds",
+          "match": "\\||@|%|=|->|-"
+        }
+      ]
+    }
+  }
+}

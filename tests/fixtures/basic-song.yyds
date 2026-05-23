@@ -1,0 +1,10 @@
+tempo 120
+meter 4/4
+
+section intro {
+  track lead {
+    | C4 / q D4 / q |
+  }
+}
+
+play intro
